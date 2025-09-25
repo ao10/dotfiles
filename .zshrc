@@ -106,6 +106,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi=nvim
+alias tf=terraform
+alias k=kubectl
+alias gs="git status"
+alias gfp="git fetch && git pull"
+alias gch="git checkout"
+alias gpfwl="git push --force-with-lease"
+alias dps="docker ps"
+alias dc="docker-compose"
+alias dcup="docker-compose up"
+alias dlf="docker logs -f"
+alias di="docker images"
+alias prune="docker stop $(docker ps -aq) && docker system prune -a"
+alias make_venv="python3 -m venv py_venv"
+
+# AWS CLI
+alias create_key_pair="aws ec2 create-key-pair --key-name my-key-pair --query 'KeyMaterial'
+alias create_security_group="aws ec2 create-vpc --cidr-block 10.0.0.0/16"
+alias authorize_security_group_ingress="aws ec2 authorize-security-group-ingress --group-id
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
